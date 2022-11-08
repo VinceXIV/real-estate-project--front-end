@@ -1,6 +1,5 @@
 import React from "react";
 import Hero from "../components/Hero";
-import Card from "./Card"; 
 
 const Rent = () => {
     const imageCSS = {
@@ -20,22 +19,6 @@ const Rent = () => {
         <>
         <Hero  />
         <div style={imageCSS}>
-            <Card   />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
 
         </div>
         </>
