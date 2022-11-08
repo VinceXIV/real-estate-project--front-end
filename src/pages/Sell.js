@@ -1,9 +1,8 @@
+import React from "react";
+
+
 const Sell = () => {
-    return ( 
-        <div>
-            Sell home here...
-        </div>
-     );
+
+    return
 }
- 
 export default Sell;
