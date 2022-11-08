@@ -9,9 +9,9 @@ const Hero = () => {
                     <img 
                         className="rounded-md" 
                         src={HeroImg} 
-                        alt="Hero Image here" />
+                        alt="" />
                 </div>
-                <div className="absolute flex flex-col justify-center">
+                {/* <div className="absolute flex flex-col justify-center">
                     <h1>Discover a place you'll love to live</h1>
                     <div className="md:space-x-4">
                         <Link
@@ -27,7 +27,7 @@ const Hero = () => {
                             Rent 
                         </Link>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
      );
