@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 const Footer = () => {
     return ( 
         <div>
@@ -10,21 +10,37 @@ const Footer = () => {
                     </div>
                     <div class="w-1/3">
                         <h3 class="uppercase font-semibold mb-4 flex justify-center md:justify-start"> LINKS</h3>
-                        <p class="mb-2">
-                        <a href="#">Home</a></p>
-                        <p class="mb-2">
-                        <a href="">About</a></p>
-                        <p class="mb-2">
-                        <a href="">Contact</a></p>
+                        <p class="mb-4">
+                        <Link  className="bg-gray-400 px-4 py-2 rounded-md" to='/'>
+                            Home
+                        </Link> </p>
+                        <p class="mb-4">
+                        <Link  className="bg-gray-400 px-4 py-2 rounded-md" to='/About'>
+                            About
+                        </Link> </p>
+                        <p class="mb-4">
+                        <Link  className="bg-gray-400 px-4 py-2 rounded-md" to='/Contact'>
+                            Contact
+                        </Link> </p>
+                        
                     </div>
                     <div class="w-1/3">
                         <h3 class="uppercase font-semibold mb-4 flex justify-center md:justify-start"> SUPPORT</h3>
-                        <p class="mb-2">
-                        <a href="#!">FAQs</a></p>
-                        <p class="mb-2">
-                        <a href="#!">Support</a></p>
-                        <p class="mb-2">
-                        <a href="#!">Help Center</a></p>
+                        <p class="mb-4">
+                        <Link  className="bg-gray-400 px-4 py-2 rounded-md"
+                             to='/About'>
+                            About
+                        </Link> </p>
+                        <p class="mb-4">
+                        <Link  className="bg-gray-400 px-4 py-1 rounded-md " to='/Support'>
+                            Support
+                        </Link></p>
+                    
+                        <p class="mb-4">
+                        <Link className="bg-gray-400 px-4 py-2 rounded-md" to='/HelpCenter'>
+                            Help Center
+                        </Link>
+                        </p>
                        
                     </div>
                     {/* <div class="w-1/4 text-sm ">
