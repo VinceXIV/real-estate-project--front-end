@@ -1,28 +1,42 @@
-import React from "react";
-import Hero from "../components/Hero";
+import React, { useEffect, useState } from "react";
+import TextField from "@mui/material/TextField";
+import Card from './Card'
 
-const Rent = () => {
-    const imageCSS = {
-        width: "100%",
-        maxWidth: "1240px",
-        margin: "0 auto",
-        paddingTop: "50px",
-         
-        display: "grid",
-         
-        gridTemplateColumns: "repeat(3, 1fr)",
-        gridTemplateRows: "auto",
-        gridGap: "20px",
-      }
+function Rent() {
+    const [houses, setHouses] = useState([]);
 
-    return(
-        <>
-        <Hero  />
-        <div style={imageCSS}>
+    useEffect(() => {
+        fetch("http://localhost:9292/houses")
+            .then((r) => r.json())
+            .then((data) => setHouses(data));
+    }, [])
+    console.log(houses)
 
+    return (
+        <div>
+            <h1>Rental Listings</h1>
+            <ul>
+                Looking for a House to Rent? Search here for your taste...
+            <div className="search">
+                <TextField
+                    id="outlined-basic"
+                    variant="outlined"
+                    fullWidth
+                    label="Search"
+                />
+            </div>
+            </ul>
+            <div>
+                <div>
+                    <h1>Popular Houses</h1>
+                </div>
+            <div>
+            { houses.map((house)=> 
+            <Card house={house} key={house.id} />
+            )}
         </div>
-        </>
-    )
+            </div>
+        </div>
+    );
 }
- 
 export default Rent;
