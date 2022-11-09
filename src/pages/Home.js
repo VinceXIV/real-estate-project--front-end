@@ -3,7 +3,7 @@ import HouseList from "../components/HouseList";
 import useFetch from "../components/useFetch";
 
 const Home = () => {
-    const {data, isLoading, error} = useFetch("")
+    const {data: houses, isLoading, error} = useFetch("http://localhost:9292/houses")
 
 
     return ( 
@@ -12,13 +12,13 @@ const Home = () => {
             { error && <h4 className="text-red-500">{ error }</h4>}
             <Hero />
 
-            <HouseList />
+            <HouseList houses={houses} listTitle = "Rent A House" />
 
             {/* filter rental houses only */}
-            <HouseList  />
+            {/* <HouseList listTitle = "Buy A House"  /> */}
 
             {/* filter purchase houses only */}
-            <HouseList  />
+            {/* <HouseList listTitle = "Sell A House" /> */}
 
 
         </div>
