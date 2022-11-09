@@ -8,13 +8,15 @@ const HouseList = ({houses, listTitle}) => {
                 <div className="grid sm:grid-cols-3 md:gap-12 sm:gap-6">
                     {houses.map((house) => (
                         <div key={house.id} className="houses-list bg-gray-200 md:p-6 p-3 rounded-lg my-4">
-                            <img className="mb-4 w-full rounded-lg" src={house.image} alt="" />
-                            <Link to={`/${house.id}`} className="hover:text-green-600" >
-                                <h2 className="font-semibold text-pink-700 md:text-2xl text-xl hover:text-gray-800">{house.title}</h2>
+                            <Link to={`/${house.id}`} >
+                                <img className="mb-4 w-full rounded-lg" src={house.image} alt="" />
+                                <h2 className="font-semibold text-blue-600 md:text-2xl text-xl hover:text-gray-800">{house.category}</h2>
+                                <h3 className="text-gray-700">{house.location}</h3>
                                 <p>{house.description.split(/\s+/).slice(0, 20).join(" ")}</p>
-                                <h3 className="text-lg text-gray-800 font-medium">{house.price}</h3>
+                                <h3 className="text-lg text-green-800 font-medium">Ksh {house.price}</h3>
                             </Link>
                         </div>
+                        
                     ))}
                 </div>
             </div>

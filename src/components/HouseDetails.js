@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 const HouseDetails = () => {
     const { id } = useParams();
-    const {data: house, isLoading, error} = useFetch("http://localhost:9292/houses" + id);
+    const {data: house, isLoading, error} = useFetch("http://localhost:9292/houses/" + id);
 
     return ( 
         <div className="md:m-24 m-6">
@@ -15,7 +15,7 @@ const HouseDetails = () => {
                 <div className="flex items-center ">
                     <article>
                         <img className="mb-4 w-full rounded-lg" src={house.image} alt="" />
-                        <h2 className="font-semibold text-pink-700 md:text-2xl text-xl hover:text-gray-800">{house.title}</h2>
+                        <h2 className="font-semibold text-pink-700 md:text-2xl text-xl hover:text-gray-800">{house.description}</h2>
                     </article>
                 </div>
             )}
