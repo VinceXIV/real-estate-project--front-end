@@ -14,7 +14,10 @@ const Hero = () => {
                 {/* <div className="absolute flex flex-col justify-center">
                     <h1>Discover a place you'll love to live</h1>
                     <div className="md:space-x-4">
-                       
+                        <Link
+                            className="bg-gray-400 px-4 py-2 rounded-md" to='/buy'>
+                            Buy 
+                        </Link>
                         <Link
                             className="bg-gray-400 px-4 py-2 rounded-md" to='/sell'>
                             Sell 

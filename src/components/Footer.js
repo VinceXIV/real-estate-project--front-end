@@ -11,15 +11,15 @@ const Footer = () => {
                     <div class="w-1/3">
                         <h3 class="uppercase font-semibold mb-4 flex justify-center md:justify-start"> LINKS</h3>
                         <p class="mb-4">
-                        <Link  className="bg-gray-400 px-4 py-2 rounded-md" to='/'>
+                        <Link   to='/'>
                             Home
                         </Link> </p>
                         <p class="mb-4">
-                        <Link  className="bg-gray-400 px-4 py-2 rounded-md" to='/About'>
+                        <Link   to='/About'>
                             About
                         </Link> </p>
                         <p class="mb-4">
-                        <Link  className="bg-gray-400 px-4 py-2 rounded-md" to='/Contact'>
+                        <Link   to='/Contact'>
                             Contact
                         </Link> </p>
                         
@@ -27,17 +27,17 @@ const Footer = () => {
                     <div class="w-1/3">
                         <h3 class="uppercase font-semibold mb-4 flex justify-center md:justify-start"> SUPPORT</h3>
                         <p class="mb-4">
-                        <Link  className="bg-gray-400 px-4 py-2 rounded-md"
+                        <Link  
                              to='/About'>
                             About
                         </Link> </p>
                         <p class="mb-4">
-                        <Link  className="bg-gray-400 px-4 py-1 rounded-md " to='/Support'>
+                        <Link   to='/Support'>
                             Support
                         </Link></p>
                     
                         <p class="mb-4">
-                        <Link className="bg-gray-400 px-4 py-2 rounded-md" to='/HelpCenter'>
+                        <Link  to='/HelpCenter'>
                             Help Center
                         </Link>
                         </p>
@@ -53,7 +53,7 @@ const Footer = () => {
                     </div> */}
                     </div>
                 <hr class="my-2 border-blue-800 sm:mx-auto dark:border-blue-700 lg:my-2" />
-                <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">COPYRIGHT © 2022 <a href="https://flowbite.com/" class="hover:underline">JAMII COOPERATIVES™</a>. All Rights Reserved.
+                <span class="text-sm text-gray-500 sm:text-center italic dark:text-gray-400">Copyright © 2022 Jamii Cooperatives™ || All Rights Reserved.
                 </span>
                 <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                             <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
