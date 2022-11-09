@@ -9,7 +9,7 @@ const Hero = () => {
                     <img 
                         className="rounded-md" 
                         src={HeroImg} 
-                        alt="Hero Image here" />
+                        alt="Hero here.." />
                 </div>
                 <div className="flex flex-col justify-center">
                     <h1>Discover a place you'll love to live</h1>
@@ -21,10 +21,6 @@ const Hero = () => {
                         <Link
                             className="bg-gray-400 px-4 py-2 rounded-md" to='/sell'>
                             Sell 
-                        </Link>
-                        <Link
-                            className="bg-gray-400 px-4 py-2 rounded-md" to='/rent'>
-                            Rent 
                         </Link>
                     </div>
                 </div>
