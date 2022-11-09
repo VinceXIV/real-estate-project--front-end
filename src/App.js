@@ -5,6 +5,7 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Rent from "./pages/Rent";
 import Sell from "./pages/Sell";
+import Footer from "./components/Footer"
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
                         <Route path='/rent' element={ <Rent />} />
                         <Route path='/contact' element={ <Contact />} />
                     </Routes>
+                    <Footer/>
                 </div>
             
             </BrowserRouter>
