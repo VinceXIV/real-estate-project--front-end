@@ -1,26 +1,37 @@
+import React from 'react';
+import { useForm } from "react-hook-form";
+import locations from '../assets/locations.png'
+
 const Contact = () => {
+    const { register, handleSubmit } = useForm();
+  const onSubmit = async data =>  console.log(data);
     return ( 
-        <div class="px-5" >
+        <div class="ml-10 space-x-0 " >
             <div class="grid md:grid-cols-2 ">
                 <div> 
                     <h1  class="text-3xl font-bold text-center"> Contact us </h1>
                      <span><h4 class="py-5 text-center ">Get in touch with our Agents</h4></span>
-                     <form class="w-full max-w-lg">
+                     <form class="w-full max-w-lg" onSubmit={handleSubmit(onSubmit)}>
                         <div class="flex flex-wrap -mx-3 mb-6">
                             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">First Name</label>
-                                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane"/>
+                                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                                 id="grid-first-name" type="text" placeholder="Jane" name="firstName"
+                                {...register("firstName", { required: "Please enter your first name." })}/>
                                 <p class="text-red-500 text-xs italic">Please fill out this field.</p>
                             </div>
                             <div class="w-full md:w-1/2 px-3">
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">Last Name</label>
-                                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe"/>
+                                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" 
+                                {...register("lastName", { required: "Please enter your first name." })} name="lastName"
+                                type="text" placeholder="Doe"/>
                             </div>
                         </div>
                         <div class="flex flex-wrap -mx-3 mb-6">
                             <div class="w-full px-3">
-                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">Phone Number</label>
-                                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id=" tel" type="tel" placeholder="07xx-xxx-xxx"/>
+                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-phone-number">Phone Number</label>
+                                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                name="phoneNumber"{...register('phoneNumber')} id=" tel" type="tel" placeholder="07xx-xxx-xxx"/>
                                 <p class="text-gray-600 text-xs italic">Phone Number follows this format 0xxx-xxxxxx</p>
                                 </div>
                             </div>
@@ -41,7 +52,9 @@ const Contact = () => {
                                         transition
                                         ease-in-out
                                         m-0
-                                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" type="text"  rows="7" columns="20"></textarea>
+                                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" 
+                                       type="text"  rows="7" columns="20" name="message"
+                                       {...register('message')} > </textarea>
                                         </div>
                                 <div className="submit-btn py-4">
                                     <button className='border py-2 text-white bg-indigo-500 w-full'>Send Message</button>
@@ -51,8 +64,9 @@ const Contact = () => {
                                 
                      </form>
                  </div>
-                 <div class="bg-orange-500 ">
+                 <div class="mt-8">
                     <h1 > location</h1>
+                    <img src={locations} alt="Location" />
                 </div>
             </div>    
     
@@ -89,10 +103,6 @@ const Contact = () => {
             <div>Home</div>
 
             </div> 
-
-
-            
-
 
     </div>
     <h6 class="text-center"> COPYRIGHT @ 2022 | JAMII COOPERATIVES</h6>
