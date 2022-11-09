@@ -12,13 +12,11 @@ const Home = () => {
             { error && <h4 className="text-red-500">{ error }</h4>}
             <Hero />
 
-            <HouseList houses={houses} listTitle = "Rent A House" />
-
-            {/* filter rental houses only */}
-            {/* <HouseList listTitle = "Buy A House"  /> */}
+            {/* filter purchase houses only */}
+            <HouseList houses={houses} listTitle = "Buy A House" />
 
             {/* filter purchase houses only */}
-            {/* <HouseList listTitle = "Sell A House" /> */}
+            <HouseList houses={houses} listTitle = "Sell A House" />
 
 
         </div>

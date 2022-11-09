@@ -9,7 +9,7 @@ const Navbar = () => {
     }
 
     return ( 
-        <div className="navbar-container">
+        <div className="navbar-container bg-blue-200">
                 <nav className='md:py-6 py-4 px-4'>
                     <div className="navbar md:flex  justify-around items-center " >
                         <div className='flex items-center justify-between'>
@@ -30,9 +30,6 @@ const Navbar = () => {
                                 </li>
                                 <li className='md:mx-8 md:my-0 my-2'>
                                     <Link to='/sell'>Sell</Link>
-                                </li>
-                                <li className='md:mx-8 md:my-0 my-2'>
-                                    <Link to='/rent'>Rent</Link>
                                 </li>
                                 <li className='md:mx-8 md:my-0 my-2 '>
                                     <Link to='/contact' className="bg-green-400 hover:bg-green-600 hover:text-gray-100 px-4 py-2 rounded-md">Contact</Link>

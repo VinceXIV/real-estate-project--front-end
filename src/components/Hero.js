@@ -5,13 +5,13 @@ const Hero = () => {
     return ( 
         <div>
             <div className="md:m-8 m-4 flex  justify-center">
-                <div className="absolute">
+                <div className="">
                     <img 
                         className="rounded-md" 
                         src={HeroImg} 
                         alt="Hero Image here" />
                 </div>
-                <div className="relative flex flex-col justify-center">
+                <div className="flex flex-col justify-center">
                     <h1>Discover a place you'll love to live</h1>
                     <div className="md:space-x-4">
                         <Link
