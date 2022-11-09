@@ -7,6 +7,7 @@ import { useEffect, useState } from "react"
 function Buy() {
 
     const [houses, setHouses] = useState([])
+    const apiHost = "http://localhost:9292"
     const imageCSS = {
         width: "100%",
         maxWidth: "1240px",
@@ -20,7 +21,7 @@ function Buy() {
         gridGap: "20px",
       }
     useEffect(()=>{
-        fetch("http://localhost:9292/houses")
+        fetch(`${apiHost}/houses`)
         .then((responce)=>responce.json())
         .then((data)=>setHouses(data))
     },[])
