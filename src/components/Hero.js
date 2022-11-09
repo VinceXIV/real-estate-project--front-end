@@ -4,14 +4,14 @@ import HeroImg from "../assets/hero.jpg"
 const Hero = () => {
     return ( 
         <div>
-            <div className="md:m-8 m-4">
-                <div className="relative">
+            <div className="md:m-8 m-4 flex  justify-center">
+                <div className="">
                     <img 
                         className="rounded-md" 
                         src={HeroImg} 
-                        alt="" />
+                        alt="Hero here.." />
                 </div>
-                {/* <div className="absolute flex flex-col justify-center">
+                <div className="flex flex-col justify-center">
                     <h1>Discover a place you'll love to live</h1>
                     <div className="md:space-x-4">
                         <Link
@@ -22,13 +22,10 @@ const Hero = () => {
                             className="bg-gray-400 px-4 py-2 rounded-md" to='/sell'>
                             Sell 
                         </Link>
-                        <Link
-                            className="bg-gray-400 px-4 py-2 rounded-md" to='/rent'>
-                            Rent 
-                        </Link>
                     </div>
-                </div> */}
-            </div>
+                </div>
+
+            </div>           
         </div>
      );
 }
