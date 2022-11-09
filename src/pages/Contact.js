@@ -1,37 +1,55 @@
-import React from 'react';
-import { useForm } from "react-hook-form";
+import React, {useState} from 'react';
+// import { useForm } from "react-hook-form";
 import locations from '../assets/locations.png'
 
 const Contact = () => {
-    const { register, handleSubmit } = useForm();
-  const onSubmit = async data =>  console.log(data);
+
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [phoneNumber, setPhoneNumber]=useState("");
+    const [message, setMessage]=useState("");
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+    }
+        const data = {
+          firstName: firstName,
+          secondName:lastName,
+          phoneNumber: phoneNumber,
+          message:message
+        };
+       
+
+
+//     const { register, handleSubmit } = useForm();
+//   const onSubmit = async data =>  console.log(data);
     return ( 
         <div class="ml-10 space-x-0 " >
             <div class="grid md:grid-cols-2 ">
                 <div> 
                     <h1  class="text-3xl font-bold text-center"> Contact us </h1>
                      <span><h4 class="py-5 text-center ">Get in touch with our Agents</h4></span>
-                     <form class="w-full max-w-lg" onSubmit={handleSubmit(onSubmit)}>
+                     <form class="w-full max-w-lg" onSubmit={handleSubmit}>
                         <div class="flex flex-wrap -mx-3 mb-6">
                             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">First Name</label>
-                                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                                 id="grid-first-name" type="text" placeholder="Jane" name="firstName"
-                                {...register("firstName", { required: "Please enter your first name." })}/>
+                                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-grey-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                                  type="text" placeholder="Jane" name="firstName"
+                                 onChange={(e) => setFirstName(e.target.value)}/>
                                 <p class="text-red-500 text-xs italic">Please fill out this field.</p>
                             </div>
-                            <div class="w-full md:w-1/2 px-3">
+                            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">Last Name</label>
-                                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" 
-                                {...register("lastName", { required: "Please enter your first name." })} name="lastName"
-                                type="text" placeholder="Doe"/>
+                                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-grey-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                type="text" placeholder="Doe"  name="lastName"
+                                onChange={(e) => setLastName(e.target.value)}/>
                             </div>
                         </div>
                         <div class="flex flex-wrap -mx-3 mb-6">
                             <div class="w-full px-3">
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-phone-number">Phone Number</label>
                                 <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                name="phoneNumber"{...register('phoneNumber')} id=" tel" type="tel" placeholder="07xx-xxx-xxx"/>
+                                name="phoneNumber" onChange={(e) => setPhoneNumber(e.target.value)}  type="tel" placeholder="07xx-xxx-xxx"/>
                                 <p class="text-gray-600 text-xs italic">Phone Number follows this format 0xxx-xxxxxx</p>
                                 </div>
                             </div>
@@ -54,7 +72,7 @@ const Contact = () => {
                                         m-0
                                         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" 
                                        type="text"  rows="7" columns="20" name="message"
-                                       {...register('message')} > </textarea>
+                                       onChange={(e) => setMessage(e.target.value)} > </textarea>
                                         </div>
                                 <div className="submit-btn py-4">
                                     <button className='border py-2 text-white bg-indigo-500 w-full'>Send Message</button>
@@ -74,40 +92,7 @@ const Contact = () => {
 
     
     
-    <footer class="bg-slate-200">
-    <div class="grid md:grid-cols-4 gap-4 " >
-        <div class="w-1/4">
-            <h2>JAMII PROPERTIES</h2>
-            <p>Lorem hhhhashdoaNILHDUUUUUA </p>
 
-        </div>
-        <div class="w-1/4"><h3> LINKS</h3>
-        <div>Home</div>
-            <div>About</div>
-            <div>Project</div>
-            <div>Contact</div>
-
-             </div>
-        <div class="w-1/4"> <h3> SUPPORT</h3>
-        <div>FAQs</div>
-            <div>Support</div>
-            <div>Help Center</div>
-            <div>Home</div>
-
-        </div>
-        <div class="w-1/4"> 
-        <h3>CONTACT</h3>
-            <div>Home</div>
-            <div>Home</div>
-            <div>Home</div>
-            <div>Home</div>
-
-            </div> 
-
-    </div>
-    <h6 class="text-center"> COPYRIGHT @ 2022 | JAMII COOPERATIVES</h6>
-    </footer>
-  
    </div>
   
         
