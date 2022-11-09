@@ -30,7 +30,7 @@ const Contact = () => {
 //   const onSubmit = async data =>  console.log(data);
     return ( 
         <div class="ml-8 space-x-0 " >
-            <h1  class="text-3xl font-bold text-center "> Contact us </h1>
+            <h1  class="text-3xl  text-center "> Contact us </h1>
                      
             <div class="grid md:grid-cols-2  ">
                 <div> 
@@ -78,6 +78,7 @@ const Contact = () => {
                                         transition
                                         ease-in-out
                                         m-0
+                            
                                         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" 
                                        type="text"  rows="5" columns="20" value={message}
                                        onChange={(e) => setMessage(e.target.value)} > </textarea>
