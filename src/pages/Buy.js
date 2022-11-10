@@ -1,9 +1,25 @@
-const Buy = () => {
-    return ( 
+import React from "react";
+// import Card from "./Card";
+import { useEffect, useState } from "react"
+import LocationCategory from "./LocationCategory";
+
+
+function Buy() {
+    
+    const [houses, setHouses] = useState([])
+    const apiHost = "http://localhost:9292"
+   
+    useEffect(()=>{
+        fetch(`${apiHost}/houses`)
+        .then((responce)=>responce.json())
+        .then((data)=>setHouses(data))
+    },[])
+    console.log(houses)
+    return(
         <div>
-            Buy home here...
+            <LocationCategory  />
         </div>
-     );
+    )
 }
- 
-export default Buy;
+
+export default Buy

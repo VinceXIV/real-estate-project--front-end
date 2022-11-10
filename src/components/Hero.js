@@ -23,11 +23,9 @@ const Hero = () => {
                             Sell 
                         </Link>
                     </div>
-                </div>
+                </div> 
 
-            </div>
-
-            
+            </div>           
         </div>
      );
 }
