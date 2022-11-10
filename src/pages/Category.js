@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Card from "./Card";
-import Locations from "./Locations";
-
-function LocationCategory(){
-    const [allHouses, setAllHouses] = useState([])
-    const [displayedHouses, setDisplayedHouses] = useState([])
+import CategoryFilter from "./CategoryFilter";
+function Category(){
+    const [categories, setCategories] = useState([])
+    const [displayedCategories, setDisplayedCategories] = useState([])
     const apiHost = "http://localhost:9292"
 
     const imageCSS = {
@@ -25,15 +24,15 @@ function LocationCategory(){
         fetch(`${apiHost}/houses`)
         .then((responce)=>responce.json())
         .then((data)=>{
-          setAllHouses(data)
-          setDisplayedHouses(data)
+          setCategories(data)
+          setDisplayedCategories(data)
         })
     },[])
 
     function filterHandler(e){
-      setDisplayedHouses(displayedHouses => {
+      setDisplayedCategories(displayedCategories => {
         return (
-          allHouses.filter(house => house.location === e.target.value)
+          categories.filter(house => house.category === e.target.value)
         )
       })
     }
@@ -43,10 +42,10 @@ function LocationCategory(){
         <>
         <label  className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Select a Region</label>
             <select onChange={filterHandler} id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-            <Locations key={allHouses.id} houses={allHouses} displayedHouses={displayedHouses}/>
+            <CategoryFilter key={categories.id} categories={categories} displayedCategories={displayedCategories}/>
             </select>
         <div style={imageCSS}>
-        {displayedHouses.map((house) => (
+        {displayedCategories.map((house) => (
           <Card key={house.id} house={house}/>
         ))} 
         </div>
@@ -54,4 +53,4 @@ function LocationCategory(){
     )
 }
 
-export default LocationCategory;
+export default Category;

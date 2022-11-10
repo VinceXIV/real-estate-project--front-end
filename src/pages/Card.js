@@ -2,12 +2,17 @@ import React from "react";
 
 
 function Card({house}) {
+    const imageStyle = {
+        width: "400px",
+        height: "400px",
+        objectFit: "contain"
+      }
     
     return(
 <>
     <div  className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
         <div >
-            <img  className="rounded-t-lg" src={house.image} alt="" />
+            <img style={imageStyle} className="rounded-t-lg" src={house.image} alt="" />
         </div>
         <div className="p-5">
             <div >

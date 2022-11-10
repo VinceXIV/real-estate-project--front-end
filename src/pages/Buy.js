@@ -2,6 +2,7 @@ import React from "react";
 // import Card from "./Card";
 import { useEffect, useState } from "react"
 import LocationCategory from "./LocationCategory";
+import Category from "./Category";
 
 
 function Buy() {
@@ -17,12 +18,8 @@ function Buy() {
     console.log(houses)
     return(
         <>
+        <Category />
         <LocationCategory  />
-        {/* <div style={imageCSS}>
-            { houses.map((house)=> 
-            <Card house={house} key={house.id} />
-            )}
-        </div> */}
         </>
     )
 }

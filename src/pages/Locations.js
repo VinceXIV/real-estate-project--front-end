@@ -10,7 +10,7 @@ function Locations({houses, displayedHouses}){
     const uniq_locations = []
 
     location_info.forEach(location => {
-        if(!uniq_locations.find(uniq_location => uniq_location.value == location.value)){
+        if(!uniq_locations.find(uniq_location => uniq_location.value === location.value)){
             uniq_locations.push(location)
         }
     })
@@ -18,7 +18,7 @@ function Locations({houses, displayedHouses}){
     console.log("categories: ", uniq_locations)
     // Use the uniq locations to create options
     const location_options = uniq_locations.map(location => {
-        return <option value={location.value}>{location.value}</option>
+        return <option value={location.value} key= {location.id}>{location.value}</option>
     })
 
     return (
