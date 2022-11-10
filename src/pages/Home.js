@@ -8,8 +8,8 @@ const Home = () => {
 
     return ( 
         <div className="">
-            { isLoading && <h4 className="text-blue-500 font-semibold md:text-2xl text-xl">Loading data..</h4>}
-            { error && <h4 className="text-red-500">{ error }</h4>}
+            {/* { isLoading && <h4 className="text-blue-500 font-semibold md:text-2xl text-xl">Loading data..</h4>}
+            { error && <h4 className="text-red-500">{ error }</h4>} */}
             <Hero />
 
             <div className="md:mx-16 mx-6">
