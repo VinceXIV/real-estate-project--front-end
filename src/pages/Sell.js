@@ -1,20 +1,26 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
-function Sell () {
+function Sell() {
   const [houses, setHouses] = useState([])
-    const apiHost = "http://localhost:9292"
-   
-    useEffect(()=>{
-        fetch(`${apiHost}/houses`)
-        .then((responce)=>responce.json())
-        .then((data)=>setHouses(data))
-    },[])
-    console.log(houses)
+  const apiHost = "http://localhost:9292"
+
+  useEffect(() => {
+    fetch(`${apiHost}/houses/sellers`)
+      .then((responce) => responce.json())
+      .then((data) => setHouses(data))
+  }, [])
+  console.log(houses)
+
+  const handleSubmit = event => {
+    event.preventDefault();
+
+  }
+
 
   return (
     <div class="p-10">
-      <div class="flex flex-col justify-center items-center" >
-        <form class="w-full max-w-sm flex flex-col">
+      <div class="flex flex-col justify-center items-center p-8" >
+        <form class="w-full max-w-sm flex flex-col" onSubmit={handleSubmit}>
           <div class="md:flex md:justify-center mb-6">
             <div class="md:w-1/3">
               <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
@@ -76,10 +82,14 @@ function Sell () {
             </div>
           </div>
           <div class="md:flex md:justify-center">
-            <div class="md:w-1/3"></div>
             <div class="md:w-2/3">
               <button class="shadow bg-green-400 hover:bg-green-600 focus:shadow-outline focus:outline-none text-black font-bold py-2 px-4 rounded" type="button">
                 Post House
+              </button>
+            </div>
+            <div class="md:w-2/3">
+              <button class="shadow bg-green-400 hover:bg-green-600 focus:shadow-outline focus:outline-none text-black font-bold py-2 px-4 rounded" type="button">
+                Update House
               </button>
             </div>
           </div>
