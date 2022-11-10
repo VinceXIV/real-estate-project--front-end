@@ -8,7 +8,7 @@ function HousesOnSale({houses}){
     })
     console.log("house components: ", house_components)
     return (
-        <div className="flex flex-wrap">
+        <div className="flex w-full justify-around flex-wrap">
             {house_components}
         </div>
     )        

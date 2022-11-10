@@ -3,10 +3,10 @@ const Footer = () => {
     return ( 
         
         <div>
-            <footer className="bg-slate-200 px-8 -py-8">
-                <div className="grid md:grid-cols-3  text-sm  " >
-                    <div className="w-1/3">
-                        <div className="uppercase font-semibold mb-4 flex justify-center md:justify-start"> JAMII PROPERTIES </div>
+            <footer class="bg-slate-200 px-8 -py-8">
+                <div class="grid md:grid-cols-4  text-sm  " >
+                    <div class="w-1/3">
+                        <div class="uppercase font-semibold mb-4 flex justify-center md:justify-start"> JAMII PROPERTIES </div>
                         <p>The best website to buy long-lasting homes </p>
                     </div>
                     <div className="w-1/3">
@@ -28,14 +28,14 @@ const Footer = () => {
                         <a href="#a!">Help Center</a></p>
                        
                     </div>
-                    {/* <div className="w-1/4 text-sm ">
+                    <div class="w-1/4 text-sm ">
                         <h3>CONTACT</h3>
 
                         <div>Home</div>
                         <div>Home</div>
                         <div>Home</div>
                         <div>Home</div>
-                    </div> */}
+                    </div>
                     </div>
                 <hr className="my-2 border-blue-800 sm:mx-auto dark:border-blue-700 lg:my-2" />
                 <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">COPYRIGHT © 2022 <a href="hattps://flowbite.com/" className="hover:underline">JAMII COOPERATIVES™</a>. All Rights Reserved.
