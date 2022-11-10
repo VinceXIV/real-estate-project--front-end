@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Card from "./Card";
 import Locations from "./Locations";
-import { Select } from 'antd';
 
 
 function LocationCategory(){
