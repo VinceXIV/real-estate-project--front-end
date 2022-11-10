@@ -6,6 +6,7 @@ function HousesOnSale({houses}){
         return <Card key={house.id} house={house}/>
     })
     console.log("house components: ", house_components)
+    
     return (
         <div className="flex flex-wrap">
             {house_components}

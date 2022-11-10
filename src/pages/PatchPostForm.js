@@ -10,7 +10,7 @@ function PatchPostForm(){
                             Location
                         </label>
                     </div>
-                    <div class="md:w-2/3">
+                    <div class="md:w-full">
                         <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" id="inline-full-name" type="text" placeholder="Enter Location" />
                     </div>
                 </div>
@@ -20,7 +20,7 @@ function PatchPostForm(){
                             Category
                         </label>
                     </div>
-                    <div class="md:w-2/3">
+                    <div class="md:w-full">
                         <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" id="inline-full-name" type="text" placeholder="Enter Category" />
                     </div>
                 </div>
@@ -30,7 +30,7 @@ function PatchPostForm(){
                             Price
                         </label>
                     </div>
-                    <div class="md:w-2/3">
+                    <div class="md:w-full">
                         <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" id="inline-full-name" type="number" placeholder="Enter Price" />
                     </div>
                 </div>
@@ -40,7 +40,7 @@ function PatchPostForm(){
                             Description
                         </label>
                     </div>
-                    <div class="md:w-2/3">
+                    <div class="md:w-full">
                         <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" id="inline-password" type="text" placeholder="Enter Description" />
                     </div>
                 </div>
@@ -50,7 +50,7 @@ function PatchPostForm(){
                             Image
                         </label>
                     </div>
-                    <div class="md:w-2/3">
+                    <div class="md:w-full">
                         <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" id="inline-full-name" type="url" placeholder="Upload Image link" />
                     </div>
                 </div>
@@ -60,13 +60,13 @@ function PatchPostForm(){
                             Size in Sqft
                         </label>
                     </div>
-                    <div class="md:w-2/3">
+                    <div class="md:w-full">
                         <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" id="inline-full-name" type="number" placeholder="Enter Size" />
                     </div>
                 </div>
                 <div class="md:flex md:justify-center">
                     <div class="md:w-1/3"></div>
-                    <div class="md:w-2/3">
+                    <div class="md:w-full">
                         <button class="shadow bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
                             Post House
                         </button>
