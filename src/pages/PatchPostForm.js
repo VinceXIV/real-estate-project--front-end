@@ -2,7 +2,7 @@ import React from 'react'
 
 function PatchPostForm(){
     return (
-        <div class="p-10">
+        <div class="p-10 flex flex-col justify-center items-center" >
             <form class="w-full max-w-sm flex flex-col">
                 <div class="md:flex md:justify-center mb-6">
                     <div class="md:w-1/3">
@@ -65,10 +65,14 @@ function PatchPostForm(){
                     </div>
                 </div>
                 <div class="md:flex md:justify-center">
-                    <div class="md:w-1/3"></div>
                     <div class="md:w-2/3">
-                        <button class="shadow bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
-                            Post House
+                        <button class="shadow bg-green-400 hover:bg-green-600 focus:shadow-outline focus:outline-none text-black font-bold py-2 px-4 rounded" type="button">
+                            Post
+                        </button>
+                    </div>
+                    <div class="md:w-2/3">
+                        <button class="shadow bg-green-400 hover:bg-green-600 focus:shadow-outline focus:outline-none text-black font-bold py-2 px-4 rounded" type="button">
+                            Edit
                         </button>
                     </div>
                 </div>
