@@ -100,7 +100,7 @@ function PatchPostForm({ handlePostingNewHouse, sellerName}){
                 <div class="md:flex md:justify-center">
                     <div class="md:w-1/3"></div>
                     <div class="md:w-2/3">
-                        <button onClick={handleFormSubmit} class="shadow bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+                        <button onClick={handleFormSubmit} class="shadow bg-blue-500 hover:bg-green-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
                             Post House
                         </button>
                     </div>

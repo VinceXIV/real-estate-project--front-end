@@ -14,11 +14,10 @@ function Sell () {
       setSellerHouses(data.houses.map(house => (
         {
           ...house,
-          location: house.location.category,
+          location: house.location.location,
           category: house.category.category
         }   
       )))
-      console.log("seller houses after processing: ", sellerHouses)
     })
   }, [])
 
@@ -26,11 +25,15 @@ function Sell () {
     setSellerHouses(sellerHouses => ([...sellerHouses, newHouse]))
   }
 
+  function handleDeleteHouse(deletedHouse){
+    setSellerHouses(sellerHouses.filter(house => house.id !== deletedHouse.id))
+  }
+
   return (
     <div className="flex flex-col">
       <PatchPostForm handlePostingNewHouse={handlePostingNewHouse} sellerName={sellerName}/>
       <div className="flex my-10">
-        <HousesOnSale houses={sellerHouses}/>
+        <HousesOnSale houses={sellerHouses} handleDeleteHouse={handleDeleteHouse}/>
       </div>
     </div>
   )
