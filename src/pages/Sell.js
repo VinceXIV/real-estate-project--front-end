@@ -1,52 +1,6 @@
 import { useEffect, useState } from "react";
 
 function Sell() {
-  const [houses, setHouses] = useState([])
-  const apiHost = "http://localhost:9292"
-
-  useEffect(() => {
-    fetch(`${apiHost}/houses/sellers`)
-      .then((responce) => responce.json())
-      .then((data) => setHouses(data))
-  }, [])
-  console.log(houses)
-
-  const [location, setLocation] = useState("");
-  const [category, setCategory] = useState("");
-  const [price, setPrice] = useState("");
-  const [description, setDescription] = useState("");
-  const [image, setImage] = useState("");
-  const [size, setSize] = useState("");
-
-  let handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      let res = await fetch("https://httpbin.org/post", {
-        method: "POST",
-        body: JSON.stringify({
-          location: location,
-          category: category,
-          price: price,
-          description: description,
-          image: image,
-          size: size,
-        }),
-      });
-      let resJson = await res.json();
-      if (res.status === 200) {
-        setLocation("");
-        setCategory("");
-        setPrice("");
-        setDescription("");
-        setImage("");
-        setSize("");
-      } else {
-        setHouses("Some error occured");
-      }
-    } catch (err) {
-      console.log(err);
-    }
-  };
 
   return (
     <div class="p-10">
