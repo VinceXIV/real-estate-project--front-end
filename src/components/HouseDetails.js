@@ -13,17 +13,26 @@ const HouseDetails = () => {
             { error && <h4 className="text-red-500">{ error }</h4>}
             {house && (
                 <div>
-                    <div className="md:flex rounded-xl bg-gray-100 lg:p-12 md:p-8 p-6">
+                    <div className="md:flex rounded-xl bg-gray-800 md:p-8 p-6">
                         <div>
-                            <h2 className="mb-2 font-semibold md:text-2xl text-xl text-gray-800">{house.category}</h2>
-                            <p className="mb-4">{house.category}, {house.location}</p>
+                            <h2 className="mb-2 font-semibold md:text-4xl text-2xl text-gray-300">{house.category}</h2>
+                            <p className="mb-4 text-light text-blue-400 md:text-2xl text-xl">{house.location}</p>
                             <img className="mb-4 w-full rounded-lg" src={house.image} alt="" />
                         </div>
-                        <aside className="md:p-8 py-2">
-                            <p>{house.size_in_sqft}</p>
-                            <p className="md:text-lg font-light">{house.description}</p>
-                            <p className="my-2 font-medium text-green-600">$ {house.price}</p>
-                            <button className="px-4 py-3 rounded-md bg-blue-400">
+                        <aside className="md:p-8 md:mt-12">
+                            <p className="text-gray-400 md:text-xl text-lg mb-4">
+                                <span className="text-blue-500 font-semibold">Size: </span><br /> 
+                                {house.size_in_sqft} sqrft
+                            </p>
+                            <p className="md:text-2xl font-light text-white my-8">
+                            <span className="text-blue-500 font-semibold">House Description: </span><br /> 
+                                {house.description}
+                            </p>
+                            <p className="my-2 font-medium text-green-600 md:text-xl text-lg mb-4">
+                                <span className="text-blue-500 font-semibold">Price: </span><br /> 
+                                $ {house.price}
+                            </p>
+                            <button className="px-4 py-3 rounded-md bg-blue-400 hover:bg-blue-500 font-medium my-4">
                                 Book Now
                             </button>
                         </aside>
