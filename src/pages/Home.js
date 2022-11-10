@@ -1,5 +1,7 @@
+import CallToAction from "../components/CallToAction";
 import Hero from "../components/Hero";
 import HouseList from "../components/HouseList";
+import SellHomeGuide from "../components/SellHomeGuide";
 import useFetch from "../components/useFetch";
 
 const Home = () => {
@@ -17,7 +19,9 @@ const Home = () => {
                 <HouseList houses={houses} listTitle = "Buy A House" />
 
                 {/* filter purchase houses only */}
-                <HouseList houses={houses} listTitle = "Sell A House" />
+                <SellHomeGuide listTitle = "Sell A House" />
+
+                <CallToAction />
             </div>
 
 

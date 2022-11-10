@@ -7,7 +7,7 @@ const HouseList = ({houses, listTitle}) => {
                 <h1 className="md:text-3xl text-2xl font-semibold my-2">{listTitle}</h1>
                 <div className="grid sm:grid-cols-3 md:gap-12 sm:gap-6">
                     {houses.slice(0, 3).map((house) => (
-                        <div key={house.id} className="houses-list bg-gray-800 p-2 rounded-lg my-4">
+                        <div key={house.id} className="houses-list bg-gray-800 shadow-xl hover:shadow-2xl p-2 rounded-lg my-4">
                             <Link to={`/${house.id}`} >
                                 <img className="mb-4 w-full rounded-lg" src={house.image} alt="" />
                                 <div className="md:p-4 p-2">
