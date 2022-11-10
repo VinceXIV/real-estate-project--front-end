@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Card from './Card'
 
 function HousesOnSale({houses}){
+    console.log("houses on sale: ", houses)
     console.log("houses: ", houses)
     const house_components = houses.map(house => {
         return <Card key={house.id} house={house}/>

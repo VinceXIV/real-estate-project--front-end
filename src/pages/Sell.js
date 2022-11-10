@@ -5,6 +5,7 @@ import HousesOnSale from "./HousesOnSale";
 function Sell () {
   const [sellerHouses, setSellerHouses] = useState([])
   const apiHost = "http://localhost:9292"
+  const sellerName = "vincent"
 
   useEffect(()=>{
     fetch(`${apiHost}/sellers/1`)
@@ -21,9 +22,13 @@ function Sell () {
     })
   }, [])
 
+  function handlePostingNewHouse(newHouse){
+    setSellerHouses(sellerHouses => ([...sellerHouses, newHouse]))
+  }
+
   return (
     <div className="flex flex-col">
-      <PatchPostForm/>
+      <PatchPostForm handlePostingNewHouse={handlePostingNewHouse} sellerName={sellerName}/>
       <div className="flex my-10">
         <HousesOnSale houses={sellerHouses}/>
       </div>
