@@ -11,7 +11,7 @@ const Hero = () => {
                         src={HeroImg} 
                         alt="Hero here.." />
                 </div>
-                <div className="flex flex-col justify-center">
+                {/* <div className="flex flex-col justify-center">
                     <h1>Discover a place you'll love to live</h1>
                     <div className="md:space-x-4">
                         <Link
@@ -23,7 +23,7 @@ const Hero = () => {
                             Sell 
                         </Link>
                     </div>
-                </div>
+                </div> */}
 
             </div>           
         </div>
