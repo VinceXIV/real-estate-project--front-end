@@ -7,9 +7,18 @@ function Sell () {
   const apiHost = "http://localhost:9292"
 
   useEffect(()=>{
-    fetch(`${apiHost}/sellers/2`)
+    fetch(`${apiHost}/sellers/1`)
     .then(result => result.json())
-    .then(data => setSellerHouses(data.houses))
+    .then(data => {
+      setSellerHouses(data.houses.map(house => (
+        {
+          ...house,
+          location: house.location.category,
+          category: house.category.category
+        }   
+      )))
+      console.log("seller houses after processing: ", sellerHouses)
+    })
   }, [])
 
   return (
