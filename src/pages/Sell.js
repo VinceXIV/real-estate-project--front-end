@@ -1,10 +1,19 @@
-import React from "react";
+import { useEffect, useState } from "react"
 
 function Sell () {
+  const [houses, setHouses] = useState([])
+    const apiHost = "http://localhost:9292"
+   
+    useEffect(()=>{
+        fetch(`${apiHost}/houses`)
+        .then((responce)=>responce.json())
+        .then((data)=>setHouses(data))
+    },[])
+    console.log(houses)
 
   return (
     <div class="p-10">
-      <div margin="auto" display="grid" place-items="center" >
+      <div class="flex flex-col justify-center items-center" >
         <form class="w-full max-w-sm flex flex-col">
           <div class="md:flex md:justify-center mb-6">
             <div class="md:w-1/3">
