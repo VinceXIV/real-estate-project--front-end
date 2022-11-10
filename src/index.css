@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.form-input{
+    @apply mt-1 block w-full py-2 px-3 border border-gray-200 bg-white rounded-md focus:outline-none focus:ring-indigo-500 sm:text-sm;
+  } 
+
+
+/* custom css */
+.title-on-image {
+  position: absolute;
+  right: 15%;
+  left: 15%;
+  bottom: 45%;
+}
+
+.head-text {
+  position: relative;
+}
+
+.text-on-image {
+ position: absolute;
+ right: 45%;
+ left: 45%;
+ bottom: 45%;
+}
