@@ -7,7 +7,7 @@ function Sell () {
   const apiHost = "http://localhost:9292"
 
   useEffect(()=>{
-    fetch(`${apiHost}/sellers/1`)
+    fetch(`${apiHost}/sellers/2`)
     .then(result => result.json())
     .then(data => {
       setSellerHouses(data.houses.map(house => (
@@ -22,7 +22,7 @@ function Sell () {
   }, [])
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col md:mb-16 mb-8">
       <PatchPostForm/>
       <div className="flex my-10">
         <HousesOnSale houses={sellerHouses}/>

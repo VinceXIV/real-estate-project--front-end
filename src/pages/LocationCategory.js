@@ -43,14 +43,15 @@ function LocationCategory(){
    
     return(
         <>
-        <div style={{paddingTop: "50px"}}>
-              <Locations key={allHouses.id} houses={allHouses} displayedHouses={displayedHouses} filterHandler={filterHandler}/>
+          <div style={{paddingTop: "50px"}}>
+                <Locations key={allHouses.id} houses={allHouses} displayedHouses={displayedHouses} filterHandler={filterHandler}/>
           </div>
-        <div style={imageCSS}>
-        {displayedHouses.map((house) => (
-          <Card key={house.id} house={house}/>
-        ))} 
-        </div>
+          
+          <div style={imageCSS}>
+            {displayedHouses.map((house) => (
+              <Card key={house.id} house={house}/>
+            ))} 
+          </div>
         </>
     )
 }
