@@ -16,14 +16,9 @@ function Buy() {
     },[])
     console.log(houses)
     return(
-        <>
-        <LocationCategory  />
-        {/* <div style={imageCSS}>
-            { houses.map((house)=> 
-            <Card house={house} key={house.id} />
-            )}
-        </div> */}
-        </>
+        <div>
+            <LocationCategory  />
+        </div>
     )
 }
 
