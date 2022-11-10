@@ -44,8 +44,7 @@ function LocationCategory(){
    
     return(
         <>
-        <label style={{fontSize: "25px", paddingTop: "50px"}} className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Select a Region</label>
-        <div>
+        <div style={{paddingTop: "50px"}}>
               <Locations key={allHouses.id} houses={allHouses} displayedHouses={displayedHouses} filterHandler={filterHandler}/>
           </div>
         <div style={imageCSS}>
