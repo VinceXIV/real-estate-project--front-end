@@ -8,6 +8,7 @@ function Sell () {
 
   const [location, setLocation]=useState("")
   const [category, setCategory]=useState("")
+  const [seller, setSeller]=useState("")
   const [price, setPrice]=useState("")
   const [description, setDescription]=useState("")
   const [image, setImage]=useState("")
@@ -16,15 +17,16 @@ function Sell () {
   
   const submitHandler = (e)=>{
     e.preventDefault();
-    const newHouse = {location, category, price, description, image, size}
+    const newHouse = {location, category, price, description, image, size, seller}
     console.log(newHouse)
     fetch(`${apiHost}/houses`, {
       method: 'POST',
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(newHouse)
-    }).then(() => {
-      console.log('working')
-    })
+    }).then((resp) => resp.json())
+      .then((data)=>console.log(data))
+      
+    
   }
 
   return (
@@ -88,6 +90,16 @@ function Sell () {
           </div>
           <div className="md:w-2/3">
             <input value={size} onChange={(e)=> setSize(e.target.value)}  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="number" placeholder="Enter Size" />
+          </div>
+        </div>
+        <div className="md:flex md:justify-center mb-6">
+          <div className="md:w-1/3">
+            <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" htmlFor="inline-full-name">
+              Seller
+            </label>
+          </div>
+          <div className="md:w-2/3">
+            <input value={seller} onChange={(e)=> setSeller(e.target.value)}  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" placeholder="Enter Size" />
           </div>
         </div>
         <div className="md:flex md:justify-center">
