@@ -18,7 +18,7 @@ function Buy() {
     console.log(houses)
     return(
         <>
-        <Category />
+        {/* <Category /> */}
         <LocationCategory  />
         </>
     )
