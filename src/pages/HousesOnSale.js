@@ -1,11 +1,11 @@
-import React, {useState} from 'react'
-import Card from './Card'
+import React from 'react'
+import SellCard from './SellCard'
 
-function HousesOnSale({houses}){
-    
+function HousesOnSale({ houses, handleDeleteHouse }){
+    console.log("houses on sale: ", houses)
     console.log("houses: ", houses)
     const house_components = houses.map(house => {
-        return <Card key={house.id} house={house}/>
+        return <SellCard key={house.id} house={house} handleDeleteHouse={handleDeleteHouse}/>
     })
     console.log("house components: ", house_components)
     

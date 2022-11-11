@@ -14,7 +14,6 @@ function Buy() {
         .then((responce)=>responce.json())
         .then((data)=>setHouses(data))
     },[])
-    console.log(houses)
     return(
         <div>
             <LocationCategory  />
